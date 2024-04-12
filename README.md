@@ -1,2 +1,2 @@
-# twitter-mortality
-How using twitter language features improves predicting the county-level mortality rates
+# Twitter-Mortality
+How using Twitter language features improves predicting the county-level mortality rates
