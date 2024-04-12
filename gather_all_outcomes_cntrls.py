@@ -7,11 +7,11 @@ from functools import reduce
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from utils import read_county_list
+from regression_utils import read_county_list
 
 mor_cats = ["all", "accident", "alzheimer", "cancer", "cereb", "diabetes",
             "heart", "influenza", "nephritis", "respiratory", "suicide"]
-year_list = [str(i) for i in list(np.arange(2009, 2019))]
+year_list = np.arange(2009, 2019)
 county_list = read_county_list()
 county_list = [int(c) for c in county_list]
 if __name__ == "__main__":
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     # normalize columns by year
     controls_lst = []
     for year in year_list:
-        controls_y = controls[controls['year'] == int(year)].copy()
+        controls_y = controls[controls['year'] == year].copy()
         for k in norm_cols:
             controls_y["n_" + k] = (controls_y[k] - np.mean(controls_y[k])) / np.std(controls_y[k])
             controls_y["n_" + k] = controls_y.groupby('cnty')["n_" + k].apply(
