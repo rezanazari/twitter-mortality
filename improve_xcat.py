@@ -139,21 +139,6 @@ if __name__ == '__main__':
                     print(res)
                     results.append(res)
 
-                # for con, vars in controls_dict.items():
-                #     X_oth = outcome_sel[vars].values
-                #     for method in methods_list:
-                #         pr, mse, pr_fold, mse_fold, _, ypred_dict = comp_pearson_corpca([X_oth] + X_tws_std,
-                #                                                                         y,
-                #                                                                         cnty_sel,
-                #                                                                         method=method,
-                #                                                                         corparm=[None] + [cor_parm] * 3,
-                #                                                                         pcaparm=[None] + [pca_parm] * 3)
-                #
-                #         res = [mor, year, 'all_'+con, method, std, cor_parm, pca_parm, pr, mse, pr_fold, mse_fold,
-                #                num_rows]
-                #         print(res)
-                #         results.append(res)
-
             #################
 
             # residual regression
